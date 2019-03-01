@@ -28,4 +28,48 @@ public class CountryController {
         return nameList;
     }
 
+    @GetMapping("/economy")
+    public List<Country> economy(){
+        List<Country> economyList = countryRepository.findAll();
+        economyList.sort((c1, c2) -> (int)(c2.getGdp() - c1.getGdp()));
+        return economyList;
+    }
+
+    @GetMapping("/total")
+    public ObjectNode total() {
+        List<Country> countryList = countryRepository.findAll();
+        Long total = 0L;
+        for (Country c : countryList) {
+            total += c.getGdp();
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode totalGDP = mapper.createObjectNode();
+        totalGDP.put("id", 0);
+        totalGDP.put("country", "total");
+        totalGDP.put("gdp", total);
+
+        return totalGDP;
+
+    }
+    @GetMapping("/gdp/{name}")
+    public Country findCountry(@PathVariable String name) {
+        List<Country> countryList = countryRepository.findAll();
+        Country country = new Country("Not found", 0L);
+        for (Country c : countryList){
+            if (c.getName().equals(name)){
+                country = c;
+            }
+        }
+        CountryLog message = new CountryLog("Searched " +country.getName() +"'s GDP");
+        rabbitTemplate.convertAndSend(JavaGdpApplication.QUEUE_NAME, message.toString());
+        log.info("Message sent");
+        return country;
+    }
+
+    @PostMapping("/gdp")
+    public List<Country> loadGdpData(@RequestBody List<Country> newData){
+        return countryRepository.saveAll(newData);
+    }
+
 }
