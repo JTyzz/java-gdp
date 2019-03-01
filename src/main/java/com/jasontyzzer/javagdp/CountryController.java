@@ -24,7 +24,7 @@ public class CountryController {
     @GetMapping("/names")
     public List<Country> getAll(){
         List<Country> nameList = countryRepository.findAll();
-        nameList.sort(Comparator.comparing(Country::getName));
+        nameList.sort(Comparator.comparing(Country::getCountry));
         return nameList;
     }
 
@@ -57,11 +57,11 @@ public class CountryController {
         List<Country> countryList = countryRepository.findAll();
         Country country = new Country("Not found", 0L);
         for (Country c : countryList){
-            if (c.getName().equals(name)){
+            if (c.getCountry().equals(name)){
                 country = c;
             }
         }
-        CountryLog message = new CountryLog("Searched " +country.getName() +"'s GDP");
+        CountryLog message = new CountryLog("Searched " +country.getCountry() +"'s GDP");
         rabbitTemplate.convertAndSend(JavaGdpApplication.QUEUE_NAME, message.toString());
         log.info("Message sent");
         return country;

@@ -5,6 +5,48 @@ Content-Type: application/json
 
 < C:/JavaProjects/java-gdp/gdp.json
 
+<> 2019-02-28T041258.200.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T041043.200.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T040914.200.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
 <> 2019-02-28T040521.200.json
 
 ###

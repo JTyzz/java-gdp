@@ -10,15 +10,15 @@ import javax.persistence.Id;
 @Entity
 public class Country {
     private @Id @GeneratedValue Long id;
-    private String name;
+    private String country;
     private Long gdp;
 
 
     public Country() {
     }
 
-    public Country(String name, Long gdp) {
-        this.name = name;
+    public Country(String country, Long gdp) {
+        this.country = country;
         this.gdp = gdp;
     }
 }
