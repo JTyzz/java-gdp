@@ -1,0 +1,104 @@
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T041258.200.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T041043.200.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T040914.200.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T040521.200.json
+
+###
+
+GET http://localhost:8080/names?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T040359.500.json
+
+###
+
+POST http://localhost:8080/gdp?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T040349.200.json
+
+###
+
+POST http://localhost:8080/resources?=
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T040343.404.json
+
+###
+
+POST http://localhost:8080/resources?=
+Accept: */*
+Cache-Control: no-cache
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+<> 2019-02-28T040258.404.json
+
+###
+
+POST http://localhost:8080/resources?=
+Accept: */*
+Cache-Control: no-cache
+
+< C:/JavaProjects/java-gdp/gdp.json
+
+###
+
